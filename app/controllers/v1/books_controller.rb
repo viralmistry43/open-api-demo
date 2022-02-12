@@ -50,7 +50,7 @@ module V1
     def book_filter
       @conditions = {}
       @conditions[:title] = params[:title] if params[:title].present?
-      @conditions[:author] = params[:author] if params[:title].present?
+      @conditions[:author] = params[:author] if params[:author].present?
     end
   end
 end
