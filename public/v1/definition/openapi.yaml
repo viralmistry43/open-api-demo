@@ -12,10 +12,8 @@ info:
 servers:
   - url: 'http://localhost:3000/v1'
     description: Local development server
-  - url: 'https://api.staging.com/v1'
+  - url: 'https://open-api-demo.herokuapp.com/v1'
     description: Staging server
-  - url: 'https://api.production.com/v1'
-    description: Production server
 
 tags:
   - name: Book
