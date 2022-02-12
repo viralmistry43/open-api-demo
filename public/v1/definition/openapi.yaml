@@ -32,7 +32,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/title'
         - $ref: '#/components/parameters/author'
-        - $ref: '#/components/parameters/published_date'
       responses:
         '200':
           description: List of Books
@@ -303,10 +302,3 @@ components:
       description: Book search by author
       schema:
         type: string
-    published_date:
-      name: published_date
-      in: query
-      description: (2022-03-04) Book search by published_date
-      schema:
-        type: string
-        format: date

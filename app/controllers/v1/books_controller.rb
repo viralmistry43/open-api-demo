@@ -45,5 +45,11 @@ module V1
     def book_params
       params.permit(:title, :author, :published_date, :total_pages)
     end
+
+    def book_filter
+      @conditions = {}
+      @conditions[:title] = params[:title] if params[:title].present?
+      @conditions[:author] = params[:author] if params[:title].present?
+    end
   end
 end
