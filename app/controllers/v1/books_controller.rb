@@ -3,6 +3,7 @@ module V1
   class BooksController < ApplicationController
 
     before_action :set_book, only: %i[show update destroy]
+    before_action :book_filter, only: :index
 
     def index
       @books = Book.where(@conditions)
