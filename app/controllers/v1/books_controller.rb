@@ -48,9 +48,8 @@ module V1
     end
 
     def book_filter
-      @conditions = {}
-      @conditions[:title] = params[:title] if params[:title].present?
-      @conditions[:author] = params[:author] if params[:author].present?
+      @conditions = []
+      @conditions = ['title like (?) or author like (?)', "%#{params[:keyword]}%", "%#{params[:keyword]}%"] if params[:keyword].present?
     end
   end
 end

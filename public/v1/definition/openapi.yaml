@@ -30,8 +30,7 @@ paths:
       summary: Get the Books
       description: Get a list with all the Books
       parameters:
-        - $ref: '#/components/parameters/title'
-        - $ref: '#/components/parameters/author'
+        - $ref: '#/components/parameters/keyword'
       responses:
         '200':
           description: List of Books
@@ -290,15 +289,9 @@ components:
       schema:
         type: integer
         minimum: 1
-    title:
-      name: title
+    keyword:
+      name: keyword
       in: query
-      description: Book search by title
-      schema:
-        type: string
-    author:
-      name: author
-      in: query
-      description: Book search by author
+      description: Book search by title or author
       schema:
         type: string
