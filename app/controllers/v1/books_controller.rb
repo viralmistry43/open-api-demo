@@ -49,7 +49,7 @@ module V1
 
     def book_filter
       @conditions = []
-      @conditions = ['title like (?) or author like (?)', "%#{params[:keyword]}%", "%#{params[:keyword]}%"] if params[:keyword].present?
+      @conditions = ['LOWER(title) like (?) or LOWER(author) like (?)', "%#{params[:keyword].downcase}%", "%#{params[:keyword].downcase}%"] if params[:keyword].present?
     end
   end
 end
