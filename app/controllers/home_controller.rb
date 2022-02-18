@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    successful_response('Open Api Specification Demo')
+    redirect_to "/v1/definition"
   end
 end
